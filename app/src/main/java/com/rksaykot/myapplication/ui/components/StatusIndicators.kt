@@ -1,6 +1,7 @@
 package com.rksaykot.myapplication.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -260,26 +261,4 @@ fun UserActivityCard(
             }
         }
     }
-}
-
-// ============ BORDER EXTENSION ============
-
-fun androidx.compose.foundation.BorderStroke(
-    width: androidx.compose.ui.unit.Dp,
-    color: androidx.compose.ui.graphics.Color
-): androidx.compose.foundation.BorderStroke {
-    return androidx.compose.foundation.BorderStroke(width, color)
-}
-
-// Extension for Box to add border
-fun Modifier.border(
-    width: androidx.compose.ui.unit.Dp,
-    color: androidx.compose.ui.graphics.Color,
-    shape: androidx.compose.ui.graphics.Shape
-): Modifier {
-    return this.border(
-        width = width,
-        color = color,
-        shape = shape
-    )
 }

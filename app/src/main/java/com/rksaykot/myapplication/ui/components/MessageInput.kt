@@ -1,8 +1,8 @@
 package com.rksaykot.myapplication.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.slideInUp
-import androidx.compose.animation.slideOutDown
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -159,8 +159,8 @@ fun SuggestedReplies(
 ) {
     AnimatedVisibility(
         visible = suggestions.isNotEmpty(),
-        enter = slideInUp(),
-        exit = slideOutDown(),
+        enter = slideInVertically(initialOffsetY = { it }),
+        exit = slideOutVertically(targetOffsetY = { it }),
         modifier = modifier
     ) {
         Column(
